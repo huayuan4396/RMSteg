@@ -1,0 +1,38 @@
+device: 'cuda:0'
+
+## parameters reported in the paper
+distortion:
+  bright: 0.3
+  hue: 0.1
+  saturation: 1.0
+  transition: 0.02
+  contrast_l: 0.5
+  contrast_h: 1.5  
+  use_jpeg: True
+  jpeg_quality: 60
+  noise: 0.07
+  blur_kernel_size: 7
+
+
+data:
+  train_img_dir: '../../datasets/coco/train2017/*'
+  train_qr_dir: '../../datasets/qr_code/v5_new/*'
+
+train:
+  cuda_devices: '0, 1, 2, 3'
+  batch_size: 4
+  img_size: 224
+  eps: !!float 1e-6
+  weight_decay: !!float 1e-5
+  betas1: 0.9
+  betas2: 0.999
+  optim_step: 1
+  optim_gamma: 1.0
+  save_freq: 1
+  epoch_num: 30
+  lr: 0.00001
+  # although the model reported in the paper is not trained with GAN
+  # we strongly suggest using GAN to finetune your model for a better visual quality
+  use_gan: False
+
+
