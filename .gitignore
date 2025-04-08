@@ -1,0 +1,5 @@
+**/pretrained/
+**/checkpoints/
+**/result/
+**/log/
+**/__pycache__/
