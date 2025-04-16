@@ -15,7 +15,14 @@ Our approach allows for message embedding into image with strong robustness agai
 ## 📸 News
 
 ### [Feburary 27, 2025] - Our paper is accepted at CVPR 2025!
+### [April 8, 2025] - Source code is released!
+### [April 16, 2025] - Pre-trained model is available!
 
-## 🧾 TODO
+## 🔧 Quick Start
 
-### Release the code and pretrained model.
+### From Pre-trained Model
+You can download our pre-trained mode from [here](https://drive.google.com/file/d/1iMowiDN8T2Rm6nlI_vDZqeNCvn-zeTkZ/view?usp=sharing) and place it in the `src/pretrained/` folder. Then, you can run the following command for a quick start:
+```bash
+cd src
+python single_test.py
+```
